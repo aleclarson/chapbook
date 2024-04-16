@@ -10,6 +10,7 @@
 	"version": "2.0.0",
 	"scripts": {
 		"build": "node scripts/website.mjs",
+		"build:format": "node scripts/build-format.mjs",
 		"e2e": "playwright test --config playwright.runtime.config.ts",
 		"e2e:extensions": "playwright test --config playwright.extensions.config.ts",
 		"lint": "eslint './src/**/*.ts'",
