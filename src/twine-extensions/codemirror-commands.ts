@@ -59,38 +59,39 @@ export const commands = {
 		}
 	}),
 	...makeInsertTextCommands({
-		insertAfter: '\n[after 1 second]\nText\n\n[continued]',
-		insertAppend: '\n[append]\n',
-		insertBlockquote: '\n<blockquote>Text</blockquote>\n',
-		insertContinue: '\n[continued]\n',
-		insertBulletedList: '\n- Item\n- Item\n',
-		insertCss: '\n[CSS]\n.page article {\n  color: green;\n}\n\n[continued]\n',
+		insertAfter: '[after ${1:1 second}]\n${2:Text}\n\n[continued]',
+		insertAppend: '[append]\n',
+		insertBlockquote: '<blockquote>${1:Text}</blockquote>\n',
+		insertContinue: '[continued]\n',
+		insertBulletedList: '- ${1:Item}\n- ${2:Item}\n',
+		insertCss: '[CSS]\n${1:Enter your CSS here}\n\n[continued]\n',
 		insertCyclingLink:
-			"{cycling link for: 'variable name', choices: ['choice', 'choice']}",
+			"{cycling link for: '${1:variable name}', choices: ['${2:choice}', '${3:choice}']}",
 		insertDropdownMenu:
-			"{dropdown menu for: 'variable name', choices: ['choice', 'choice']}",
-		insertEmbedAmbientSound: "{ambient sound: 'sound name'}",
-		insertEmbedSoundEffect: "{sound effect: 'sound name'}",
-		insertEmbedPassage: "{embed passage: 'Passage name'}",
-		insertEmbedYouTubeVideo: "{embed YouTube video: 'URL'}",
-		insertImageFlickr: "{embed Flickr image: 'Flickr embed code'}",
-		insertImageUrl: "{embed image: 'URL to image'}",
-		insertImageUnsplash: '{embed Unsplash image: }',
-		insertForkList: '\n> Link\n> Link\n',
-		insertIf: '\n[if condition]\nText\n\n[continue]\n',
-		insertIfElse: '\n[if condition]\nText\n\n[else]Text\n\n[continued]\n',
+			"{dropdown menu for: '${1:variable name}', choices: ['${2:choice}', '${3:choice}']}",
+		insertEmbedAmbientSound: "{ambient sound: '${1:sound name}'}",
+		insertEmbedSoundEffect: "{sound effect: '${1:sound name}'}",
+		insertEmbedPassage: "{embed passage: '${1:Passage name}'}",
+		insertEmbedYouTubeVideo: "{embed YouTube video: '${1:URL}'}",
+		insertImageFlickr: "{embed Flickr image: '${1:Flickr embed code}'}",
+		insertImageUrl: "{embed image: '${1:URL to image}'}",
+		insertImageUnsplash:
+			"{embed Unsplash image: '${1:Link to Unsplash image}'}",
+		insertForkList: '> ${1:Link}\n> ${2:Link}\n',
+		insertIf: '[if ${1:condition}]\n${2:Text}\n\n[continue]\n',
+		insertIfElse: '[if ${1:condition}]\n${2:Text}\n\n[else]\n${3:Text}\n\n[continued]\n',
 		insertJs:
-			"\n[JavaScript]\nwrite('Hello from JavaScript');\n\n[continued]\n",
-		insertNote: '\n[note]\nNote to self\n\n[continued]\n',
-		insertNumberedList: '\n1. Item\n2. Item\n',
-		insertPassageLink: "{link to: 'Passage name', label: 'Label text'}",
-		insertRestartLink: "{restart link, label: 'Label text'}",
+			"\n[JavaScript]\n${1:write('Hello from JavaScript');}\n\n[continued]\n",
+		insertNote: '[note]\n${1:Note to self}\n\n[continued]\n',
+		insertNumberedList: '1. ${1:Item}\n2. ${2:Item}\n',
+		insertPassageLink: "{link to: '${1:Passage name}', label: '${2:Label text}'}",
+		insertRestartLink: "{restart link, label: '${1:Label text}'}",
 		insertRevealPassageLink:
-			"{reveal link: 'Label text', passage: 'Passage name'}",
+			"{reveal link: '${1:Label text}', passage: '${2:Passage name}'}",
 		insertRevealTextLink:
-			"{restart link: 'Label text', text: 'Displayed text'}",
-		insertSectionBreak: '\n***\n',
-		insertTextInput: "{text input for: 'variable name'}",
-		insertUnless: '\n[unless condition]\nText\n\n[continued]\n'
+			"{restart link: '${1:Label text}', text: '${2:Displayed text}'}",
+		insertSectionBreak: '***\n',
+		insertTextInput: "{text input for: '${1:variable name}'}",
+		insertUnless: '[unless ${1:condition}]\n${2:Text}\n\n[continued]\n'
 	})
 };
