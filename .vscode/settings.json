@@ -1,0 +1,11 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": [
+        "source.formatDocument",
+        "source.fixAll.eslint"
+    ],
+    "editor.formatOnSave": false,
+    "eslint.run": "onSave",
+    "prettier.useTabs": true,
+    "prettier.singleQuote": true
+}
